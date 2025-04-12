@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grocery List</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-
+    <div id="container">
+        <div id="main">
+            <h1>Grocery List</h1>
+            <hr>
+            <div id="displayItem"></div>
+            <button id="showSlideBtn" onclick="showAddItemSlide()">+</button>
+        </div>
+        <div id="sliderPg" style="display: none;">
+            <h1>Add New Items</h1>
+            <hr>
+            <div id="formContainer">
+                <input id="newItem" type="text" placeholder="Add new grocery here">
+                <br>
+                <button id="addItemBtn" onclick="addGroceryItem()">Add Item</button>
+                <br>
+                <button id="backToListBtn" onclick="backToList()">↩</button>
+            </div>
+        </div>
+    </div>
 
     <script src="index.js"></script>
 </body>
