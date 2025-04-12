@@ -16,6 +16,8 @@ hr{
 }
 button{
     background-color: tomato;
+    letter-spacing: 1px;
+    color: white;
 }
 button:hover{
     background-color: rgb(252, 152, 134);
@@ -39,12 +41,15 @@ label{
 }
 #displayItem{
     float: left;
-    width: 360px;
+    width: 340px;
+    height: 450px;
     margin-left: 50px;
     margin-right: 0;
+    overflow: auto;
 }
 #newItem{
     font-size: 1.2rem;
+    font-weight: bold;
     margin-top: 100px;
 }
 #formContainer{
@@ -56,7 +61,7 @@ label{
     padding: 10px 15px;
     margin: 25px;
     margin-top: 400px;
-    margin-right: 35px;
+    margin-right: 30px;
     margin-left: 0;
     border-radius: 20px;
     font-size: 1rem;
