@@ -25,7 +25,9 @@ button:hover{
 button:active{
     background-color: rgb(252, 206, 198);
 }
-
+ul{
+    margin: 0px;
+}
 li{
     color: white;
     font-size: 1.8rem;
@@ -52,7 +54,7 @@ li{
     color: white;
     font-size: 1.8rem;
     float: left;
-    width: 320px;
+    width: 270px;
     height: 450px;
     margin-left: 50px;
     margin-right: 0;

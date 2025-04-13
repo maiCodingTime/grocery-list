@@ -20,28 +20,40 @@ function showDeleteItemSlide(){
     slideDelete.classList.remove('slidePage');
     const changeToMain = setTimeout(changeToDeleteSlide, 2800);
 
-/*     for(let i = 0; i < listArray.length; i++){                      // Displays list w/ chkboxes
+    for(let i = 0; i < listArray.length; i++){                      // Displays list w/ chkboxes
+        
         const listContainer = document.createElement('ul');
         const deleteChkbox = document.createElement('input');
         const list = document.createElement('li');
+        
 
         deleteChkbox.type = 'checkbox';
         deleteChkbox.id = "redChk";
         list.style.listStyleType = "none";
-
+        list.textContent = listArray[i];
+        
         list.appendChild(deleteChkbox);
         list.prepend(deleteChkbox);
-        showListItem.prepend(deleteChkbox);
-        list.textContent = listArray[i];
         showListItem.appendChild(list);
         showListItem.appendChild(listContainer);
-    } */
+
+        console.log(listArray);
+    }
+
 }
 function backToList(){
     slideAdd.classList.add('slidePage');
     slideDelete.classList.add('slidePage');
     mainDiv.classList.remove('slideMain');
     const changePage = setTimeout(changeToMainSlide, 2800);
+}
+function backToMainList(){
+    slideAdd.classList.add('slidePage');
+    slideDelete.classList.add('slidePage');
+    mainDiv.classList.remove('slideMain');
+    const changePage = setTimeout(changeToMainSlide, 2800);
+
+    showListItem.textContent = "";                  // clears list to not repeat it again if getting back to delete slide
 }
 function addGroceryItem(){
 
@@ -63,6 +75,7 @@ function addGroceryItem(){
             listItem.prepend(chkbox);               // places checkbox before li
             displayItem.appendChild(listItem);
             displayItem.appendChild(groceryList);
+      
 
             listArray.push(newItem);
             
