@@ -42,7 +42,7 @@ li{
 }
 #displayItem{
     float: left;
-    width: 340px;
+    width: 320px;
     height: 450px;
     margin-left: 50px;
     margin-right: 0;
@@ -56,12 +56,24 @@ li{
 #formContainer{
     text-align: center;
 }
-#showSlideBtn{
+#showSlideAddBtn{
     float: right;
     width: 50px;
     padding: 10px 15px;
     margin: 25px;
-    margin-top: 400px;
+    margin-top: 345px;
+    margin-right: 30px;
+    margin-left: 0;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#showSlideDeleteBtn{
+    float: right;
+    width: 50px;
+    padding: 10px 15px;
+    margin: 25px;
+    margin-top: -8px;
     margin-right: 30px;
     margin-left: 0;
     border-radius: 20px;
@@ -87,6 +99,26 @@ li{
     font-size: 1rem;
     font-weight: bold;
 }
+#deleteItemBtn{
+    float: right;
+    padding: 10px 15px;
+    margin: 25px;
+    margin-top: -110px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#goToMainBtn{
+    float: right;
+    padding: 10px 15px;
+    margin: 25px;
+    margin-top: -50px;
+    margin-right: 35px;
+    margin-left: 0;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
 #itemChk{
     margin: 20px;
     transform: scale(1.5);                 /* changes checkbox size */
@@ -99,7 +131,7 @@ li{
     transform: rotateY(360deg);
     transition: 3s;
 }
-.slideAddingPage{
+.slidePage{
     transform: rotateY(360deg);
     transition: 3s;
 }

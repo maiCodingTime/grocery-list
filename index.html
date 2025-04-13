@@ -13,9 +13,10 @@
             <h1>Grocery List</h1>
             <hr>
             <div id="displayItem"></div>
-            <button id="showSlideBtn" onclick="showAddItemSlide()">+</button>
+            <button id="showSlideAddBtn" onclick="showAddItemSlide()">+</button>
+            <button id="showSlideDeleteBtn" onclick="showDeleteItemSlide()">-</button>
         </div>
-        <div id="sliderPg" style="display: none;">
+        <div id="slideAdd" style="display: none;">
             <h1>Add New Items</h1>
             <hr>
             <div id="formContainer">
@@ -24,6 +25,16 @@
                 <button id="addItemBtn" onclick="addGroceryItem()">Add Item</button>
                 <br>
                 <button id="backToListBtn" onclick="backToList()">↩</button>
+            </div>
+        </div>
+        <div id="slideDelete" style="display: none;">
+            <h1>Delete Items</h1>
+            <hr>
+            <div id="formContainer">
+                <div id="displayItem"></div>
+                <button id="deleteItemBtn" onclick="deleteListItem()">Delete Items</button>
+                <br>
+                <button id="goToMainBtn" onclick="backToList()">↩</button>
             </div>
         </div>
     </div>
