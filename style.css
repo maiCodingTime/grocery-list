@@ -48,6 +48,16 @@ li{
     margin-right: 0;
     overflow: auto;
 }
+#showListItem{
+    color: white;
+    font-size: 1.8rem;
+    float: left;
+    width: 320px;
+    height: 450px;
+    margin-left: 50px;
+    margin-right: 0;
+    overflow: auto;
+}
 #newItem{
     font-size: 1.2rem;
     font-weight: bold;
@@ -122,7 +132,13 @@ li{
 #itemChk{
     margin: 20px;
     transform: scale(1.5);                 /* changes checkbox size */
-    accent-color: rgb(66, 223, 66);     /* changes checkbox color */
+    accent-color: #42df42;     /* changes checkbox color */
+    
+}
+#redChk{
+    margin: 20px;
+    transform: scale(1.5);                 
+    accent-color: #e44141;    
     
 }
 

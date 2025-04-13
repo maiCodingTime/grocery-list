@@ -6,6 +6,7 @@ const mainDiv = document.getElementById("main");
 const slideAdd = document.getElementById("slideAdd");
 const slideDelete = document.getElementById("slideDelete");
 const displayItem = document.getElementById("displayItem");
+const showListItem =  document.getElementById("showListItem");
 let listArray = [];
 
 
@@ -18,6 +19,23 @@ function showDeleteItemSlide(){
     mainDiv.classList.add('slideMain');
     slideDelete.classList.remove('slidePage');
     const changeToMain = setTimeout(changeToDeleteSlide, 2800);
+
+/*     for(let i = 0; i < listArray.length; i++){                      // Displays list w/ chkboxes
+        const listContainer = document.createElement('ul');
+        const deleteChkbox = document.createElement('input');
+        const list = document.createElement('li');
+
+        deleteChkbox.type = 'checkbox';
+        deleteChkbox.id = "redChk";
+        list.style.listStyleType = "none";
+
+        list.appendChild(deleteChkbox);
+        list.prepend(deleteChkbox);
+        showListItem.prepend(deleteChkbox);
+        list.textContent = listArray[i];
+        showListItem.appendChild(list);
+        showListItem.appendChild(listContainer);
+    } */
 }
 function backToList(){
     slideAdd.classList.add('slidePage');
@@ -40,15 +58,14 @@ function addGroceryItem(){
             chkbox.id = "itemChk";
             listItem.style.listStyleType = "none";
             listItem.textContent = newItem;
-            
 
             listItem.appendChild(chkbox);
             listItem.prepend(chkbox);               // places checkbox before li
             displayItem.appendChild(listItem);
-            displayItem.append(groceryList);
+            displayItem.appendChild(groceryList);
 
             listArray.push(newItem);
-            console.log(listArray);
+            
 
             alert(`${newItem} is added to the list!`);
         
@@ -61,6 +78,10 @@ function addGroceryItem(){
             document.getElementById("newItem").value = ""; 
         }
     }
+}
+function deleteListItem(){
+   
+
 }
 function changeToAddSlide(){
     mainDiv.style.display = "none";
