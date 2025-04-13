@@ -5,6 +5,7 @@
 const mainDiv = document.getElementById("main");
 const sliderPg = document.getElementById("sliderPg");
 const displayItem = document.getElementById("displayItem");
+let listArray = [];
 
 
 function showAddItemSlide(){
@@ -16,26 +17,40 @@ function addGroceryItem(){
 
     const newItem = document.getElementById("newItem").value;
 
-
     if(newItem){
-        const chkbox = document.createElement('input');
-        let listItem = document.createElement('label');
-        const breakListItems = document.createElement('br');
-
-        chkbox.type = 'checkbox';
-        chkbox.id = "itemChk";
-        listItem.textContent = newItem;
-
-        displayItem.appendChild(chkbox);
-        displayItem.appendChild(listItem);
-        displayItem.appendChild(breakListItems);
-
-        alert(`${newItem} is added to your list!`);
         
-        if(alert){
-            document.getElementById("newItem").value = "";      // clears input box
-        }    
+        if(!listArray.includes(newItem)){
+            const groceryList = document.createElement('ul');
+            const chkbox = document.createElement('input');
+            const listItem = document.createElement('li');
+
+            chkbox.type = 'checkbox';
+            chkbox.id = "itemChk";
+            listItem.style.listStyleType = "none";
+            listItem.textContent = newItem;
+            
+
+            listItem.appendChild(chkbox);
+            listItem.prepend(chkbox);               // places checkbox before li
+            displayItem.appendChild(listItem);
+            displayItem.append(groceryList);
+
+            listArray.push(newItem);
+            console.log(listArray);
+
+            alert(`${newItem} is added to the list!`);
         
+            if(alert){
+                document.getElementById("newItem").value = ""; 
+            }
+        }
+        else{
+            alert(`${newItem} already exists in the list!`);
+            document.getElementById("newItem").value = ""; 
+        }
+
+        
+
     }
 }
 function backToList(){

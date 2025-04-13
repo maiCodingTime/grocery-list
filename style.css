@@ -25,7 +25,8 @@ button:hover{
 button:active{
     background-color: rgb(252, 206, 198);
 }
-label{
+
+li{
     color: white;
     font-size: 1.8rem;
 }
